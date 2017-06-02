@@ -3,14 +3,14 @@
 #include <string.h>
 
 #include "list.h"
-
+#include "iterator.h"
 
 int main(void) {
 
 	List* list= list_create();
 	char value;
 	char pred;
-	char val;	char del;
+	char del;
 	char s[7];
    	while (1) {
         scanf("%7s", s);
@@ -27,8 +27,9 @@ int main(void) {
         } else if (!strcmp(s, "clear")) {
         	list_clear(list);
         } else if (!strcmp(s, "task")) {
-        	printf("Input the value\n");
-        	scanf("%c", &val);
+        	char val;
+        	scanf(" %c", &val);
+        	Node *new= list_node_find(list, val);
         	list_task(list, val);
         } else if (!strcmp(s, "help")) {
         	help();
@@ -44,17 +45,19 @@ int main(void) {
         	list_destroy(&list);
         	break;   
         } else if (!strcmp(s, "first")) {
-        	Node* temp=iterator_first(list);
-        	printf("%c\n", temp->data);
-        
+  			 iterator_first(list);
+        } else if (!strcmp(s, "last")) {
+        	iterator_last(list);
+        } else if (!strcmp(s, "next")) {
+        	scanf(" %c", &value);
+        	Node *node= list_node_find(list, value);
+        	iterator_next(list, node);
         } else {
         	list_destroy(&list);
             printf("An error occurred. Type 'help' to find the solution\n");
             exit(2);
         
-        }/* else if (!strcmp(s, "next")) {
-        	printf("")
-        }*/
+        } 
 	}
 
 
