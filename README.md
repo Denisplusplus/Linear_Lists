@@ -23,3 +23,17 @@
 * insert the definite element
 ### Testing
 ...
+### How To Use
+- 'add'     - to insert the value to the list\n");    
+Input the elements in this order:
+1. The value to set up
+2. The value after which you have to insert
+Note: if the value after which you want to insert doesn't exist, program should stop working <br>
+For inserting the element to the list origin input in this way: 'value' '.'
+- 'delete'  - to remove the value from the list
+- 'lenght'  - to gain the list size
+- 'task'    - to start removing the elements that precede and follow the specified value 
+- 'print'   - to print the list
+- 'clear'   - to make the list empty 
+- 'destroy' - to destroy the list
+- 'exit'    - to quit the application
