@@ -27,7 +27,7 @@
 - 'add'     - to insert the value to the list\n");    
 Input the elements in this order:
 1. The value to set up
-2. The value after which you have to insert
+2. The value after which you have to insert <br>
 Note: if the value after which you want to insert doesn't exist, program should stop working <br>
 For inserting the element to the list origin input in this way: 'value' '.'
 - 'delete'  - to remove the value from the list
