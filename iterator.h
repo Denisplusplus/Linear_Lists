@@ -1,5 +1,5 @@
-#ifndef _LIST_H_
-#define _LIST_H_
+#ifndef _ITERATOR_H_
+#define _ITERATOR_H_
 
 typedef char Item;
 
