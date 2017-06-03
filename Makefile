@@ -1,5 +1,5 @@
 start: main.o list.o iterator.o
-	gcc -o exec main.o list.o iterator.o
+	gcc -o start main.o list.o iterator.o
 
 main.o: main.c list.h iterator.h 
 	gcc -c -w -std=c99 main.c
